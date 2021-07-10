@@ -262,6 +262,7 @@ namespace Microsoft.MixedReality.Toolkit.Input
 
                 // Populate initial data or drag data
                 Vector2 lastPosition;
+                // Debug.Log(pointerData.lastMousePoint3d);
                 if (pointerData.lastMousePoint3d == null)
                 {
                     // For the first event, use the same position for 'last' and 'new'.
@@ -271,6 +272,7 @@ namespace Microsoft.MixedReality.Toolkit.Input
                 {
                     // Otherwise, re-project the last pointer position.
                     lastPosition = RaycastCamera.WorldToScreenPoint(pointerData.lastMousePoint3d.Value);
+                    
                 }
 
                 // Save off the 3D position of the cursor.
